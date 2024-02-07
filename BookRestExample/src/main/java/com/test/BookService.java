@@ -26,7 +26,6 @@ public class BookService {
 	}
 	
 	//get single book by id
-	
 	public Book getBookById(int id)
 	{
 		Book b=null;
@@ -34,5 +33,18 @@ public class BookService {
 		return b;
 		
 	}
+	
+	
+	//Add Book
+	
+	public Book AddBook(Book b)
+	{
+		list.add(b);
+		return b;
+		
+	}
+	
+	
+	
 
 }
