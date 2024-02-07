@@ -51,17 +51,29 @@ public class BootjpaApplication {
         
         //Delete data
         
-        userrepo.deleteById(2);
-        System.out.println("deleted");
+        /*userrepo.deleteById(2);
+        System.out.println("deleted");*/
         
         
-        //Retrieve all data
+      //Retrieve all data
         
-      Iterable<user> result= userrepo.findAll();
-      
-      result.forEach(user->{
-    	  System.out.print(user);
-      });
+        /*Iterable<user> result= userrepo.findAll();
+        
+        result.forEach(user->{
+      	  System.out.print(user);
+        });*/
+          
+          
+        //Custom method
+      List<user> users= userrepo.findByname("Snehal Patil");
+       
+     //  List<user> users=userrepo.findBynameAndcity("Vinayak Arade", "Kolhapur");
+       
+       users.forEach(e->{
+     	  System.out.print(e);
+       });
+         
+        
         
         
         
