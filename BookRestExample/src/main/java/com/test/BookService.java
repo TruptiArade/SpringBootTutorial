@@ -18,6 +18,7 @@ public class BookService {
 		list.add(new Book(4569,"Android","Snehal"));
 		list.add(new Book(4570,"MySQL","Vinayak"));
 		list.add(new Book(4571,"Mongodb","Samindar"));
+		
 	}
 	
 	//get all book
@@ -30,7 +31,14 @@ public class BookService {
 	public Book getBookById(int id)
 	{
 		Book b=null;
+	   try {
+		
 		b= list.stream().filter(e->e.getId()==id).findFirst().get();
+	   }
+	   catch(Exception e){
+		   e.printStackTrace();
+		   
+	   }
 		return b;
 		
 	}
