@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class MyController {
 	
-	//http://localhost:8080/about
+	
 	
 	@RequestMapping(value="/about", method=RequestMethod.GET)
 	public String about()
 	{
 		return "about";
-		//about.html
+		
 	}
 }
