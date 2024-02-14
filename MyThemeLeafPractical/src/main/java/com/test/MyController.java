@@ -27,6 +27,8 @@ public class MyController {
 		
 	}
 	
+	
+	//handling Iteration
 	@GetMapping("/example_loop")
 	public String iterateHandler(Model m)
 	{
@@ -34,6 +36,28 @@ public class MyController {
 		List<String> names = List.of("Trupti","Snehal","Shital","Madhuri","Mayuri","Ayesha");
 		m.addAttribute("names",names);
 		return "Iterate";
+	}
+	
+	//handler for conditional statements
+	@GetMapping("/condition")
+	public String conditionHandler(Model m)
+	{
+		m.addAttribute("isActive", false);
+		m.addAttribute("gender","F");
+		
+		List<Integer> list = List.of(45, 32, 19, 67, 88, 27);
+		
+		m.addAttribute("myList",list);
+	
+		return "condition";
+	}
+	
+	
+	//handler for including fragments
+	@GetMapping("/service")
+	public String serviceHandler(Model m)
+	{
+		return "service";
 	}
 	
 	
